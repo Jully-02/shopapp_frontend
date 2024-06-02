@@ -1,0 +1,67 @@
+@import '../../../styles/shared-styles.scss';
+.page-number {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  margin: 0 2px;
+  border-radius: 3px;
+}
+
+.page-number.active {
+  background-color: $shopapp-color !important;
+  color: #fff;
+  border-color: $shopapp-color !important;
+}
+
+.btn.btn-primary {
+  margin-left: 10px;
+}
+
+.container-fluid {
+  background-color: #fff;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  height: 100vh;
+}
+
+.custom-table td,
+.custom-table th {
+    white-space: nowrap; /* ngăn các từ được ngắt bởi không gian trống */
+}
+
+.custom-table td {
+    width: 1%; /* Mỗi ô sẽ có độ rộng tương ứng với nội dung của nó */
+}
+
+thead th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+tbody td:nth-child(1),
+tbody td:nth-child(2),
+tbody td:nth-child(5),
+tbody td:nth-child(7),
+tbody td:nth-child(8),
+tbody td:nth-child(9),
+tbody td:nth-child(10),
+tbody td:nth-child(11),
+tbody td:nth-child(12) {
+    text-align: center;
+}
+
+tbody td {
+  vertical-align: middle;
+}
+
+tbody td:nth-child(11) {
+  text-transform: capitalize;
+}
+
+tbody td:nth-child(6) {
+  max-width: 250px;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+

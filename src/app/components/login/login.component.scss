@@ -1,0 +1,124 @@
+@import '../../styles/shared-styles.scss';
+
+.container {
+    color: #fff;
+    height: 100vh;
+    margin-top: 70px;
+}
+
+.login-form {
+    background-color: rgb(12,13,55);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    border: 1px solid rgb(32,34,60);
+    align-items: center;
+    justify-content: center;
+}
+
+.login-header {
+    text-align: center;
+    color: $shopapp-title-color;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    background-color: transparent;
+    border: none;
+    color: #fffd;
+}
+
+.form-control:focus {
+    color: #fff;
+    background-color: transparent;
+    outline: none;
+    border-color: transparent;
+    padding-left: 0;
+    box-shadow: none;
+}
+
+.divider-nospace {
+    border-top: 1px solid #fff;
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    // transform: translateY(-50%);
+    color: $shopapp-title-color;
+    cursor: pointer;
+}
+
+.checkbox-text {
+    color: rgb(243,165,42);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+// Color checkbox when chosen
+.checkbox-text input[type="checkbox"]:checked {
+    border-color: #fff;
+    background-color: $shoppapp-tint-color;
+}
+
+.form-check-input {
+    margin-right: 5px;
+}
+
+.register-link {
+    color: $shopapp-title-color;
+    text-decoration: none;
+}
+
+.access-right {
+    margin-top: 20px;
+    width: 200px;
+    color:#fff;
+    background-color: $shopapp-background-color !important;
+    border: 1px solid $shoppapp-tint-color;
+}
+
+.access-right:focus {
+    border: 1px solid $shoppapp-tint-color;
+    background-color: #0C0D37;
+}
+
+.form-control::placeholder {
+    /* Chrome, Firefox, Opera, Sfari 10.1+ */
+    // color: rgba(243,165,42,0.4);
+    color: #555;
+    opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(243,165,42,0.4);
+}
+
+.form-control::-ms-input-placeholder {
+    /* Micorsoft Edge */
+    color: rgba(243,165,42,0.4);
+}
+
+.login-button {
+    background: linear-gradient(to right, $shoppapp-tint-color, $shopapp-color);
+    color: #fff;
+    border-radius: 30px;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 20px;
+    border: none;
+}
+
+.divider {
+    height: 1px;
+    background-color: rgb(243,165,42);
+    margin: 20px;
+}

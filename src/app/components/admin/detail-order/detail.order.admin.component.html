@@ -1,0 +1,50 @@
+<div class="container">
+    <!-- <h1>Order Details</h1> -->
+    <div class="row">
+        <h3 class="title-header mt-3">Order Information</h3>
+        <div>
+            <p><strong>Order ID: </strong> {{ orderResponse.id }}</p>
+            <p><strong>User ID: </strong> {{ orderResponse.user_id }} </p>
+            <p><strong>Full Name: </strong> {{ orderResponse.fullname }}</p>
+            <p><strong>Phone Number: </strong> {{ orderResponse.phone_number }}</p>
+            <p><strong>Email: </strong> {{ orderResponse.email }}</p>
+            <p><strong>Address: </strong> {{ orderResponse.address }}</p>
+            <p><strong>Note: </strong> {{ orderResponse.note }}</p>
+            <p><strong>Order Date: </strong> {{ orderResponse.order_date | date}}</p>
+
+            <div class="form-group">
+                <label for="statusSelect"><strong>Status: </strong></label>
+                <select id="statusSelect" class="form_control" [(ngModel)]="orderResponse.status">
+                    <option value="PENDING">Pending</option>
+                    <option value="PROCESSING">Processing</option>
+                    <option value="SHIPPED">Shipped</option>
+                    <option value="DELIVERED">Delivered</option>
+                    <option value="CANCELLED">Cancelled</option>
+                </select>
+            </div>
+        </div>
+        <h3 class="title-header mt-3">Order Details</h3>
+        <table class="table table-bordered table-striped custom-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total money</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order_detail of orderResponse.order_details; 
+                let i = index">
+                    <td>{{ order_detail.product.title }}</td>
+                    <td>{{ order_detail.product.price }}</td>
+                    <td>{{ order_detail.number_of_products }}</td>
+                    <td>{{ order_detail.total_money }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button class="btn btn-primary col-md-2" (click)="saveOrder()">
+        Save
+    </button>
+</div>

@@ -1,0 +1,25 @@
+.container {
+    background-color: #fff;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    height: 100vh;
+}
+
+.rounded-square {
+    border-radius: 10px;
+}
+
+thead th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+tbody td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+tbody td:nth-child(5) {
+    text-align: left;
+}
+
